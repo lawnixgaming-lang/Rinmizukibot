@@ -1,4 +1,3 @@
-# Rinmizukibot
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +6,7 @@
 <title>RinMizuki Bot - Multi-Purpose Discord Bot</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
+  /* Base styles */
   body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -22,12 +22,12 @@
   }
   header h1 {
     margin: 0;
-    font-size: 3em;
-    text-shadow: 0 0 15px #fff;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #fff;
   }
   header p {
     margin: 10px 0 0;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #f0e6ff;
     text-shadow: 0 0 10px #ff6b81;
   }
@@ -38,6 +38,7 @@
     padding: 0 20px;
   }
 
+  /* Profile image */
   .profile {
     display: flex;
     align-items: center;
@@ -47,7 +48,8 @@
     margin-bottom: 50px;
   }
   .profile img {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     border-radius: 20px;
     box-shadow: 0 0 20px #ff6b81, 0 0 40px #6e0dd0;
     transition: transform 0.3s;
@@ -62,7 +64,7 @@
   }
 
   .section h2 {
-    font-size: 2.2em;
+    font-size: 2em;
     color: #ff6b81;
     margin-bottom: 15px;
     text-shadow: 0 0 10px #ff6b81;
@@ -72,16 +74,19 @@
     font-size: 1.1em;
     line-height: 1.6em;
     color: #ddd;
+    margin: 0 auto;
+    max-width: 700px;
   }
 
   ul li {
     margin-bottom: 8px;
   }
 
+  /* Neon button */
   .neon-btn {
     display: inline-block;
-    padding: 20px 45px;
-    font-size: 1.4em;
+    padding: 18px 35px;
+    font-size: 1.2em;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
@@ -91,9 +96,10 @@
     box-shadow: 0 0 10px #ff6b81, 0 0 20px #6e0dd0, 0 0 30px #ff6b81, 0 0 40px #6e0dd0;
     animation: neon 6s ease infinite;
     transition: 0.3s;
+    margin-top: 20px;
   }
   .neon-btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 0 20px #ff6b81, 0 0 40px #6e0dd0, 0 0 60px #ff6b81, 0 0 80px #6e0dd0;
   }
 
@@ -108,6 +114,42 @@
     text-align: center;
     padding: 20px;
     color: #999;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2em;
+    }
+    header p {
+      font-size: 1em;
+    }
+    .section h2 {
+      font-size: 1.6em;
+    }
+    .section p, .section ul {
+      font-size: 1em;
+    }
+    .neon-btn {
+      padding: 15px 30px;
+      font-size: 1.1em;
+    }
+    .profile img {
+      max-width: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .profile {
+      gap: 20px;
+    }
+    .profile img {
+      max-width: 180px;
+    }
+    .neon-btn {
+      width: 90%;
+      text-align: center;
+    }
   }
 
 </style>
@@ -127,7 +169,7 @@
 
   <div class="section">
     <h2>About RinMizuki Bot</h2>
-    <p>RinMizuki is a versatile, multi-purpose Discord bot designed to improve your server experience. From moderation to fun commands, music, and utility features, RinMizuki keeps your server lively and secure.</p>
+    <p>RinMizuki is a versatile, multi-purpose Discord bot designed to enhance your server experience. From moderation to fun commands, music, and utility features, RinMizuki keeps your server lively and secure.</p>
   </div>
 
   <div class="section">
