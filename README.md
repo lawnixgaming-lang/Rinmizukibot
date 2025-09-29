@@ -22,8 +22,9 @@
   }
   header h1 {
     margin: 0;
-    font-size: clamp(1.8rem, 5vw, 3rem); /* scales for mobile/desktop */
+    font-size: clamp(1.8rem, 5vw, 3rem);
     text-shadow: 0 0 10px #fff;
+    word-break: break-word;
   }
   header p {
     margin: 10px 0 0;
@@ -37,6 +38,7 @@
     max-width: 1000px;
     margin: 5vw auto;
     padding: 0 5%;
+    box-sizing: border-box;
   }
 
   /* Profile Image */
@@ -62,6 +64,7 @@
   .section {
     margin-bottom: 5vw;
     text-align: center;
+    padding: 0 2%;
   }
   .section h2 {
     font-size: clamp(1.5rem, 4vw, 2.2rem);
@@ -74,11 +77,14 @@
     line-height: 1.6em;
     color: #ddd;
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 100%;
+  }
+  ul {
+    padding-left: 20px;
+    text-align: left;
   }
   ul li {
     margin-bottom: 8px;
-    text-align: left;
   }
 
   /* Neon button */
@@ -97,6 +103,7 @@
     transition: 0.3s;
     margin-top: 20px;
     text-align: center;
+    word-break: break-word;
   }
   .neon-btn:hover {
     transform: scale(1.05);
@@ -115,6 +122,21 @@
     padding: 20px 5%;
     color: #999;
     font-size: clamp(0.8rem, 2vw, 1rem);
+    word-break: break-word;
+  }
+
+  /* Media Queries for extra small devices */
+  @media (max-width: 480px) {
+    .section p, .section ul {
+      font-size: 1rem;
+    }
+    .neon-btn {
+      padding: 12px 20px;
+      font-size: 1rem;
+    }
+    header {
+      padding: 8vw 5%;
+    }
   }
 
 </style>
