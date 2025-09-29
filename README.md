@@ -6,7 +6,6 @@
 <title>RinMizuki Bot - Multi-Purpose Discord Bot</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  /* Base styles */
   body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -14,42 +13,43 @@
     color: #fff;
   }
 
+  /* Header */
   header {
     text-align: center;
-    padding: 50px 20px;
+    padding: 5vw 5%;
     background: linear-gradient(135deg, #6e0dd0, #ff6b81);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   }
   header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: clamp(1.8rem, 5vw, 3rem); /* scales for mobile/desktop */
     text-shadow: 0 0 10px #fff;
   }
   header p {
     margin: 10px 0 0;
-    font-size: 1.2em;
+    font-size: clamp(1rem, 3vw, 1.3rem);
     color: #f0e6ff;
     text-shadow: 0 0 10px #ff6b81;
   }
 
+  /* Container */
   .container {
     max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 5vw auto;
+    padding: 0 5%;
   }
 
-  /* Profile image */
+  /* Profile Image */
   .profile {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 5vw;
   }
   .profile img {
     width: 100%;
     max-width: 250px;
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 0 20px #ff6b81, 0 0 40px #6e0dd0;
     transition: transform 0.3s;
@@ -58,35 +58,34 @@
     transform: scale(1.05);
   }
 
+  /* Sections */
   .section {
-    margin-bottom: 50px;
+    margin-bottom: 5vw;
     text-align: center;
   }
-
   .section h2 {
-    font-size: 2em;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     color: #ff6b81;
     margin-bottom: 15px;
     text-shadow: 0 0 10px #ff6b81;
   }
-
   .section p, .section ul {
-    font-size: 1.1em;
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
     line-height: 1.6em;
     color: #ddd;
     margin: 0 auto;
-    max-width: 700px;
+    max-width: 90%;
   }
-
   ul li {
     margin-bottom: 8px;
+    text-align: left;
   }
 
   /* Neon button */
   .neon-btn {
     display: inline-block;
-    padding: 18px 35px;
-    font-size: 1.2em;
+    padding: clamp(12px, 3vw, 18px) clamp(25px, 5vw, 35px);
+    font-size: clamp(1rem, 3vw, 1.2em);
     font-weight: bold;
     color: #fff;
     text-decoration: none;
@@ -97,59 +96,25 @@
     animation: neon 6s ease infinite;
     transition: 0.3s;
     margin-top: 20px;
+    text-align: center;
   }
   .neon-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px #ff6b81, 0 0 40px #6e0dd0, 0 0 60px #ff6b81, 0 0 80px #6e0dd0;
   }
-
   @keyframes neon {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
   }
 
+  /* Footer */
   footer {
     background-color: #1a1a2f;
     text-align: center;
-    padding: 20px;
+    padding: 20px 5%;
     color: #999;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2em;
-    }
-    header p {
-      font-size: 1em;
-    }
-    .section h2 {
-      font-size: 1.6em;
-    }
-    .section p, .section ul {
-      font-size: 1em;
-    }
-    .neon-btn {
-      padding: 15px 30px;
-      font-size: 1.1em;
-    }
-    .profile img {
-      max-width: 200px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .profile {
-      gap: 20px;
-    }
-    .profile img {
-      max-width: 180px;
-    }
-    .neon-btn {
-      width: 90%;
-      text-align: center;
-    }
+    font-size: clamp(0.8rem, 2vw, 1rem);
   }
 
 </style>
