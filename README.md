@@ -6,15 +6,23 @@
 <title>RinMizuki Bot - Multi-Purpose Discord Bot</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
+  /* Reset */
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Roboto', sans-serif;
     background: #0d0d1a;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
   }
 
   header {
+    width: 100%;
     text-align: center;
     padding: 5vw 5%;
     background: linear-gradient(135deg, #6e0dd0, #ff6b81);
@@ -29,16 +37,18 @@
     font-size: clamp(1rem, 3vw, 1.3rem);
     color: #f0e6ff;
     text-shadow: 0 0 10px #ff6b81;
+    margin-top: 0.5em;
   }
 
   .container {
+    width: 100%;
     max-width: 1000px;
-    margin: 5vw auto;
-    padding: 0 5%;
+    padding: 5vw 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5vw;
+    text-align: center;
   }
 
   .profile img {
@@ -53,9 +63,9 @@
   }
 
   .section {
-    text-align: center;
     width: 100%;
     max-width: 800px;
+    margin: 0 auto;
   }
   .section h2 {
     font-size: clamp(1.5rem, 4vw, 2.2rem);
@@ -67,10 +77,15 @@
     font-size: clamp(0.95rem, 3vw, 1.1rem);
     line-height: 1.6;
     color: #ddd;
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
   }
-  ul { padding-left: 20px; text-align: left; }
-  ul li { margin-bottom: 8px; }
+  ul {
+    padding-left: 20px;
+    text-align: left;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
 
   .neon-btn {
     display: inline-block;
@@ -87,6 +102,8 @@
     transition: 0.3s;
     margin-top: 20px;
     word-break: break-word;
+    max-width: 300px;
+    width: 100%;
   }
   .neon-btn:hover {
     transform: scale(1.05);
@@ -99,16 +116,18 @@
   }
 
   footer {
+    width: 100%;
     background-color: #1a1a2f;
     text-align: center;
     padding: 20px 5%;
     color: #999;
     font-size: clamp(0.8rem, 2vw, 1rem);
     word-break: break-word;
+    margin-top: auto;
   }
 
   @media (max-width: 768px) {
-    .container { padding: 0 3%; }
+    .container { padding: 5vw 3%; }
     .section h2 { font-size: clamp(1.4rem, 5vw, 2rem); }
     .section p, .section ul { font-size: 1rem; }
   }
@@ -116,7 +135,7 @@
   @media (max-width: 480px) {
     header { padding: 8vw 5%; }
     .section h2 { font-size: 1.5rem; }
-    .neon-btn { width: 100%; text-align: center; }
+    .neon-btn { width: 100%; text-align: center; max-width: 100%; }
   }
 </style>
 </head>
