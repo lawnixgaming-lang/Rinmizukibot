@@ -6,14 +6,14 @@
 <title>RinMizuki Bot - Multi-Purpose Discord Bot</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
   body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
     background: #0d0d1a;
     color: #fff;
   }
 
-  /* Header */
   header {
     text-align: center;
     padding: 5vw 5%;
@@ -21,37 +21,29 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   }
   header h1 {
-    margin: 0;
     font-size: clamp(1.8rem, 5vw, 3rem);
     text-shadow: 0 0 10px #fff;
     word-break: break-word;
   }
   header p {
-    margin: 10px 0 0;
     font-size: clamp(1rem, 3vw, 1.3rem);
     color: #f0e6ff;
     text-shadow: 0 0 10px #ff6b81;
   }
 
-  /* Container */
   .container {
     max-width: 1000px;
     margin: 5vw auto;
     padding: 0 5%;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
   }
 
-  /* Profile Image */
-  .profile {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 5vw;
-  }
   .profile img {
     width: 100%;
     max-width: 250px;
-    height: auto;
     border-radius: 20px;
     box-shadow: 0 0 20px #ff6b81, 0 0 40px #6e0dd0;
     transition: transform 0.3s;
@@ -60,11 +52,10 @@
     transform: scale(1.05);
   }
 
-  /* Sections */
   .section {
-    margin-bottom: 5vw;
     text-align: center;
-    padding: 0 2%;
+    width: 100%;
+    max-width: 800px;
   }
   .section h2 {
     font-size: clamp(1.5rem, 4vw, 2.2rem);
@@ -74,20 +65,13 @@
   }
   .section p, .section ul {
     font-size: clamp(0.95rem, 3vw, 1.1rem);
-    line-height: 1.6em;
+    line-height: 1.6;
     color: #ddd;
     margin: 0 auto;
-    max-width: 100%;
   }
-  ul {
-    padding-left: 20px;
-    text-align: left;
-  }
-  ul li {
-    margin-bottom: 8px;
-  }
+  ul { padding-left: 20px; text-align: left; }
+  ul li { margin-bottom: 8px; }
 
-  /* Neon button */
   .neon-btn {
     display: inline-block;
     padding: clamp(12px, 3vw, 18px) clamp(25px, 5vw, 35px);
@@ -102,7 +86,6 @@
     animation: neon 6s ease infinite;
     transition: 0.3s;
     margin-top: 20px;
-    text-align: center;
     word-break: break-word;
   }
   .neon-btn:hover {
@@ -115,7 +98,6 @@
     100%{background-position:0% 50%}
   }
 
-  /* Footer */
   footer {
     background-color: #1a1a2f;
     text-align: center;
@@ -125,20 +107,17 @@
     word-break: break-word;
   }
 
-  /* Media Queries for extra small devices */
-  @media (max-width: 480px) {
-    .section p, .section ul {
-      font-size: 1rem;
-    }
-    .neon-btn {
-      padding: 12px 20px;
-      font-size: 1rem;
-    }
-    header {
-      padding: 8vw 5%;
-    }
+  @media (max-width: 768px) {
+    .container { padding: 0 3%; }
+    .section h2 { font-size: clamp(1.4rem, 5vw, 2rem); }
+    .section p, .section ul { font-size: 1rem; }
   }
 
+  @media (max-width: 480px) {
+    header { padding: 8vw 5%; }
+    .section h2 { font-size: 1.5rem; }
+    .neon-btn { width: 100%; text-align: center; }
+  }
 </style>
 </head>
 <body>
