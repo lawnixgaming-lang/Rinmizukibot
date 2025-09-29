@@ -149,7 +149,7 @@
 <div class="container">
 
   <div class="profile">
-    <img src="https://raw.githubusercontent.com/laynH/Anime-Girls-Holding-Programming-Books/master/C%2B%2B/Sakura_Nene_CPP.jpg" alt="RinMizuki Bot Profile">
+    <img src="https://i.imgur.com/HMwakr5.png" alt="RinMizuki Bot Profile">
   </div>
 
   <div class="section">
